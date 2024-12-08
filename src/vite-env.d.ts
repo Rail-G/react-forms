@@ -6,10 +6,8 @@ interface StateDefault {
   score: string,
   useAdd: boolean,
   useEdit: boolean,
-  editId: number | string
+  editId: string
 }
-
-interface PropsDefault {}
 
 interface TableRow {
   id: string;
@@ -24,4 +22,23 @@ interface ImageData {
   data?: any;
   height?: number;
   width?: number;
+}
+
+interface AddData {
+  date: string, 
+  score: string, 
+  onChangeDate: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onChangeScore: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  addData: (e: React.MouseEvent<HTMLButtonElement>) => void,
+  closeBlock: (type: string) => void
+}
+
+interface UpdData {
+  id: string,
+  date: string, 
+  score: string, 
+  onChangeDate: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  onChangeScore: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  updData: (e: React.MouseEvent<HTMLButtonElement>, index: string) => void
+  closeBlock: (type: string) => void
 }

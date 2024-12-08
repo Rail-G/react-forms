@@ -1,4 +1,4 @@
-export function AddDataBlock({date, score, onChangeDate, onChangeScore, addData, closeBlock}) {
+export function AddDataBlock({date, score, onChangeDate, onChangeScore, addData, closeBlock}: AddData) {
     return (
         <div className="main-create-block">
             <form className="create-table-block" noValidate>

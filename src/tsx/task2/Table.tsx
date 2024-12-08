@@ -4,10 +4,12 @@ import { UpdateDataBlock } from "./UpdateData";
 import { AddDataBlock } from "./AddDataBlock";
 import { v4 as uuidv4 } from 'uuid';
 
-export class Table extends Component<PropsDefault, StateDefault> {
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export class Table extends Component<{}, StateDefault> {
     errorTag: string
     errorText: string
-    constructor(props: PropsDefault) {
+    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+    constructor(props: {}) {
         super(props);
         this.state = {
           items: [],
@@ -28,7 +30,7 @@ export class Table extends Component<PropsDefault, StateDefault> {
         this.deleteItem = this.deleteItem.bind(this)
     }
 
-    addData(e: React.ChangeEvent<HTMLInputElement>) {
+    addData(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault()
         if (this.checkValidity()) {
             return
@@ -48,7 +50,7 @@ export class Table extends Component<PropsDefault, StateDefault> {
         this.setState({...this.state, items: setItem });
     }
 
-    updData(e: React.ChangeEvent<HTMLInputElement>, index: string) {
+    updData(e: React.MouseEvent<HTMLButtonElement>, index: string) {
         e.preventDefault()
         if (this.checkValidity()) {
             return

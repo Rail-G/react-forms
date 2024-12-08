@@ -11,7 +11,7 @@ export function Images() {
         setImages(prevImages => ([...prevImages, ...result]));
     }
 
-    const onDelete = (id: string) => {
+    const onDelete = (id: string): void => {
         setImages(images.filter((image: ImageData) => image.id !== id));
     }
 
