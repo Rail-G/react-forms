@@ -110,7 +110,7 @@ th, td {
 }
 
 .main-create-block {
-  position: fixed;
+  position: absolute;
   display: flex;
   top: 0;
   left: 0;
@@ -295,4 +295,5 @@ img {
 
 .task2 {
   min-height: 300px;
+  position: relative;
 }

@@ -77,7 +77,7 @@ export class Table extends Component<{}, StateDefault> {
         if(this.state.date) {
             const [date, month, year] = this.state.date.split('.')
             if(!(+date > 0 && +date <= 31 && +month > 0 && +month <= 12 && +year > 0 && +year < 9999)) {
-                this.showError("#date", 'Только цифры');
+                this.showError("#date", 'Некорректная дата');
                 result = true
             } else {
                 this.hideError("#date")

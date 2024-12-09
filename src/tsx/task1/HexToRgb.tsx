@@ -11,8 +11,7 @@ export function HexToRgb() {
                 return parseInt(ev, 16)
               } 
             });
-            console.log(rgbColor)
-            return rgbColor.filter(ev => undefined !== ev).length == 3 
+            return rgbColor.filter(ev => undefined !== ev && /^#[0-9a-f]{6}/gmi.test(color)).length == 3 
             ? setColor({rgb: true, color: `rgb(${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]})`}) 
             : setColor({rgb: false, color: 'rgb(255,0,0)'})
         } else {
